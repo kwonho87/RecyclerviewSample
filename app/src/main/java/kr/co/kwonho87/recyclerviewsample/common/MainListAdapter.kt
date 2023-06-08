@@ -4,6 +4,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kr.co.kwonho87.recyclerviewsample.R
 
@@ -12,9 +13,7 @@ class MainListAdapter (private var list: MutableList<TestData>): RecyclerView.Ad
     // inner class로 ViewHolder 정의
     inner class ItemViewHolder(itemView: View?): RecyclerView.ViewHolder(itemView!!) {
 
-        var data1Text: TextView = itemView!!.findViewById(R.id.data1Text)
-        var data2Text: TextView = itemView!!.findViewById(R.id.data2Text)
-        var data3Text: TextView = itemView!!.findViewById(R.id.data3Text)
+        var title: TextView = itemView!!.findViewById(R.id.title)
 
         fun bind(data: TestData, position: Int) {
             data1Text.text = data.getData1()
